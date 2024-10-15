@@ -1,4 +1,4 @@
-public class trabajandoConClases {
+public class TrabajandoConClases {
     public static void main(String[] args) {
 //        Persona persona1 = new Persona("enrique",20,74);
 //        Persona persona2 = new Persona();
