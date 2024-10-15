@@ -6,17 +6,27 @@ public class Main {
         File archivo = new File(nombreArchivo);
 
         try {
-            // Si el archivo no existe, lo creamos
+
             if (!archivo.exists()) {
                 archivo.createNewFile();
                 System.out.println("Archivo creado: " + nombreArchivo);
             }
 
-            // Intentamos leer el archivo
+
             try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
-                String linea;
+                String linea = "";
+                int cantidad=0;
+                String cadena="aeiouAEIOU";
                 while ((linea = br.readLine()) != null) {
                     System.out.println(linea);
+
+                    for(char character : linea.toCharArray()) {
+                        if (cadena.indexOf(character) != -1) {
+                            cantidad = cantidad + 1;
+                        }
+                    }
+                    System.out.println(cantidad);
+                    cantidad = 0;
                 }
             } catch (IOException e) {
                 System.err.println("Error al leer el archivo: " + e.getMessage());
