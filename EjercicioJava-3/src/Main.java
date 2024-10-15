@@ -44,6 +44,7 @@ public class Main {
         marca=sc.next();
         TelefonoInteligente telefono = new TelefonoInteligente(marca);
         sc.close();
+
     }
 
 }
